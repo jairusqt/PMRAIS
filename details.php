@@ -10,7 +10,6 @@ $warpage_check_data = $data->select('warpage_check');
 $warpage_side_data = $data->select('warpage_side');
 
 foreach($metals_data as $data){
-    echo $data['tool_name'];    
 }
 foreach($pockets_number_data as $pocket_number){
     
