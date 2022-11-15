@@ -6,10 +6,9 @@ if(isset($_GET['submit'])){
         echo "Please enter a value";
     } 
     else {
-    $id = $_GET['id_number'];
+    $id = (isset($_GET['id_number']) && is_numeric($_GET['id_number'])) ? intval($_GET['id_number']) : 0;
     $select_ids = $data->selectId('metal_inspection', 'metal_tool_id', $id);
         foreach($select_ids as $select_id){
-           
         }
     }
 }   

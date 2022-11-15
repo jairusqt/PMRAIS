@@ -1,8 +1,9 @@
 <?php
+
 require 'core/init.php';
 $data = new db;
-$id = 29;
-$metals_data = $data->selectId('metal_inspection','metal_tool_id', $id);
+
+$metals_data = $data->selectId('metal_inspection','metal_tool_id', $_GET['metal_tool_id']);
 $pockets_number_data = $data->select('pockets_number');
 $pockets_size_data = $data->select('pockets_size');
 $pockets_calc_data = $data->select('pockets_size_calc');

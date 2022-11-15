@@ -31,6 +31,11 @@ if(isset($_POST['submit'])){
     
 </head>
 <body class="center">
+    <div class="grid-container float-right">
+        <div>
+            <a class="btn" href="inspectionTable.php">Inspection Table</a>
+        </div>
+    </div>
     <div>
         <h2 class="text-center">INSPECTION ENTRY</h2>
         <form action="" method="post">
@@ -60,7 +65,9 @@ if(isset($_POST['submit'])){
                     <input type="time" name="timeEnd">
                 </div>
             </div>
-            <input class="grid-container mx-auto btn" type="submit" name="submit">
+            <div class="grid-container">
+                <button href="inspectionTable.php" class="mx-auto btn" type="submit" name="submit"> Submit </button>
+            </div>
         </form>
     </div>
 </body>

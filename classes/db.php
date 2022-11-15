@@ -38,11 +38,16 @@
           $array = array();
           $query = "SELECT * FROM ".$table_name." where ".$column_name." = ".$id." ";
           $result = mysqli_query($this->con,$query);
-          while($row = mysqli_fetch_Assoc($result)){
-               $array[] = $row;
+          if(!$result){
+               die(mysqli_errno($this->con));
+          }
+          if(mysqli_num_rows($result) > 0){
+               while($row = mysqli_fetch_Assoc($result)){
+                    $array[] = $row;
+               }
           }
           return $array;
       }
-       
+
  }  
  ?>  

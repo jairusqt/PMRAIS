@@ -27,7 +27,7 @@ $metals_data = $data->select('metal_inspection');
             </tr>
             <?php foreach($metals_data as $metal_data){ ?>
             <tr>
-                <td class="text-center"><?php echo $metal_data['metal_tool_id']; ?></td>
+                <td class="text-center"><a href="details.php?metal_tool_id=<?php echo $metal_data['metal_tool_id']; ?>"> <?php echo $metal_data['metal_tool_id']; ?> </a></td>
                 <td class="text-center"><?php echo $metal_data['tool_name']; ?></td>
                 <td class="text-center"><?php echo $metal_data['received_date']; ?></td>
                 <td class="text-center"><?php echo $metal_data['inspection_date']; ?></td>
